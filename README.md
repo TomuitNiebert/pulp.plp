@@ -13,9 +13,10 @@ Pressure cannot go below zero bar.
 The contractual flow Q = 400. The pipe equation P A − P B = 0.1 x Q.
 With Q = 400 it can be calculated that P A − P B = 40, while the maximum pressure drop is 30 bar.
 So this problem is infeasible.
-
-`from plpcom import plpinit, plpvar, plpeq, plpexit, plpresults
+```
+from plpcom import plpinit, plpvar, plpeq, plpexit, plpresults
 plpinit()`
+```
 ###variables
 ```
 PA = plpvar(’pa’, [None, 0, -1e5, 40, -0.01 , 70] )
