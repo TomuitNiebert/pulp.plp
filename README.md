@@ -15,7 +15,7 @@ With Q = 400 it can be calculated that P A − P B = 40, while the maximum press
 So this problem is infeasible.
 ```
 from plpcom import plpinit, plpvar, plpeq, plpexit, plpresults
-plpinit()`
+plpinit()
 ```
 ###variables
 ```
