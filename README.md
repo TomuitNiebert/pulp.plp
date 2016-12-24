@@ -25,13 +25,18 @@ Q = plpvar(’q’ ,[None, 0, -1e3, 400] )
 ###equation
 `Epipe = plpeq(’epi’, [(1,PA), (-1,PB), (-0.1,Q)] )`
 ###do-it
-'plpexit(1)
-
+```
+plpexit(1)
+```
+###print
+```
 print ’ PA PB Q’
 print ’x {:11.2f} {:11.2f} {:11.2f} ’.format(PA.x, PB.x, Q.x)
 print ’force {:11.2f} {:11.2f} {:11.2f} ’.format(PA.force, PB.force, Q.force)
-'
+```
 ###The result is
-`         PA        PB        Q
+```
+         PA        PB        Q
 x        70.00     40.00   300.00
 force 10000.00 -10000.00 -1000.00'
+```
