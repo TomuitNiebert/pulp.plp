@@ -17,10 +17,11 @@ So this problem is infeasible, when we apply the constraints and equate the flow
 `from plpcom import plpinit, plpvar, plpeq, plpexit, plpresults
 plpinit()`
 ###variables
-``
+```
 PA = plpvar(’pa’,[None, 0, -1e5, 40, -0.01 , 70] )
 PB = plpvar(’pb’,[None, 0, -1e5, 40, -0.01 , 70] )
-Q = plpvar(’q’ ,[None, 0, -1e3, 400] )``
+Q = plpvar(’q’ ,[None, 0, -1e3, 400] )
+```
 ###equation
 `Epipe = plpeq(’epi’, [(1,PA), (-1,PB), (-0.1,Q)] )`
 ###do-it
