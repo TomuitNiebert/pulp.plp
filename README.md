@@ -6,7 +6,7 @@ Two Python modules will allow easy formulation of a PLP problem with variables a
 The CBC solver is accessed via the PULP package.
 For each variable there is a plf consisting of slopes and points like [ s0 , p1 , s2 , p3 ]
 
-Small example
+#Small example
 Consider a pipe between node A and B.
 The maximum pressure is 70 bar and the minimum contractual pressure is 40 bar.
 Pressure cannot go below zero bar.
@@ -16,11 +16,11 @@ So this problem is infeasible, when we apply the constraints and equate the flow
 
 from plpcom import plpinit, plpvar, plpeq, plpexit, plpresults
 plpinit()
-#variables
+ #variables
 PA = plpvar(’pa’,[None, 0, -1e5, 40, -0.01 , 70] )
 PB = plpvar(’pb’,[None, 0, -1e5, 40, -0.01 , 70] )
 Q = plpvar(’q’ ,[None, 0, -1e3, 400] )
-#equation
+ #equation
 Epipe = plpeq(’epi’, [(1,PA), (-1,PB), (-0.1,Q)] )
 
 plpexit(1)
